@@ -2,8 +2,10 @@
 # Solution
 The solution for starve free readers-writers problem is using priority queue. By using the FIFO priority queue we can ensure starvation doesn't happen.
 # Code :
+```
 semaphore x,y,s;//All should be initialised to 1
 int Count=0;
+
 Readers :
 
 wait(x);
@@ -22,6 +24,7 @@ Writers :
 
 wait(x); 
 wait(s);
-signal(x);
 //Writing
+signal(x);
 signal(s);
+```
